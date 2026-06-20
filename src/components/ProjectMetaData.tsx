@@ -16,7 +16,7 @@ const ProjectMeta: React.FC<ProjectMetaProps> = ({ projekt }) => {
         <input 
           type="text" 
           readOnly 
-          value={projekt.projektleitung} 
+          value={projekt.projektleiter} 
           className="readonly-input" 
         />
       </div>

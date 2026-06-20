@@ -1,7 +1,7 @@
 export interface Projekt {
   id: string;
   name: string;
-  projektleitung: string;
+  projektleiter: string;
   beschreibung: string;
   modifiedAt: string;
   modifiedBy: string;

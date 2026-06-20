@@ -1,5 +1,6 @@
 import { Projekt, Kategorie, Geldeinlage } from '../types';
-import mockData from '../data.json';
+import mockProjekte from '../data/projekte.json';
+import mockKategorien from '../data/kategorien.json';
 
 export const dataService = {
   /**
@@ -8,13 +9,13 @@ export const dataService = {
   async getInitialData(): Promise<{ projekte: Projekt[]; kategorien: Kategorie[] }> {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     
-    const sortierteProjekte = [...mockData.projekte].sort((a, b) => 
+    const sortierteProjekte = [...mockProjekte].sort((a, b) => 
       a.name.localeCompare(b.name)
     );
 
     return {
       projekte: sortierteProjekte,
-      kategorien: mockData.kategorien as Kategorie[]
+      kategorien: mockKategorien as Kategorie[]
     };
   }  
 };
